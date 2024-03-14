@@ -36,17 +36,6 @@
                 <key>flat_pkg_path</key>
                 <string>%pathname%</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/semi-unpack</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>PkgExtractor</string>
-            <key>Arguments</key>
-            <dict>
-                <key>pkg_path</key>
-                <string>%RECIPE_CACHE_DIR%/semi-unpack/License_removal.pkg</string>
-                <key>extract_root</key>
                 <string>%RECIPE_CACHE_DIR%/unpack</string>
             </dict>
         </dict>
@@ -56,7 +45,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>source</key>
-				<string>%RECIPE_CACHE_DIR%/unpack/Scripts/postinstall</string>
+				<string>%RECIPE_CACHE_DIR%/unpack/License_removal.pkg</string>
 				<key>target</key>
 				<string>%RECIPE_CACHE_DIR%/payload/MSOfficeLicenseRemover.sh</string>
 			</dict>
@@ -70,7 +59,6 @@
                 <array>
                     <string>%RECIPE_CACHE_DIR%/unpack</string>
                     <string>%RECIPE_CACHE_DIR%/payload</string>
-                    <string>%RECIPE_CACHE_DIR%/semi-unpack</string>
                 </array>
             </dict>
         </dict>

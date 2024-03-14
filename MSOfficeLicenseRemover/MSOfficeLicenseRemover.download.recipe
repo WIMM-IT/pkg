@@ -46,7 +46,7 @@
 			<dict>
 				<key>source</key>
 				<string>%RECIPE_CACHE_DIR%/unpack/License_removal.pkg</string>
-				<key>target</key>%
+				<key>target</key>
 				<string>%RECIPE_CACHE_DIR%/payload/</string>
 			</dict>
 		</dict>
@@ -57,8 +57,8 @@
             <dict>
                 <key>path_list</key>
                 <array>
-                    <string>%RECIPE_CACHE_DIR%/unpack</string>
-                    <string>%RECIPE_CACHE_DIR%/payload</string>
+                    <string>%RECIPE_CACHE_DIR%/unpack2</string>
+                    <string>%RECIPE_CACHE_DIR%/payload2</string>
                 </array>
             </dict>
         </dict>

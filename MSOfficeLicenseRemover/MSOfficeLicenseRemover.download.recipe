@@ -41,13 +41,22 @@
         </dict>
 		<dict>
 			<key>Processor</key>
-			<string>PkgPayloadUnpacker</string>
+			<string>FileFinder</string>
 			<key>Arguments</key>
 			<dict>
-				<key>pkg_payload_path</key>
-				<string>%RECIPE_CACHE_DIR%/unpack/License_removal.pkg/Scripts/*</string>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/Scripts/</string>
+				<key>pattern</key>
+				<string>postinstall</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>FileMover</string>
+			<key>Arguments</key>
+			<dict>
+				<key>source</key>
+				<string>%found_filename%</string>
+				<key>target</key>
+				<string>%RECIPE_CACHE_DIR%/payload/MSOfficeLicenseRemover.sh</string>
 			</dict>
 		</dict>
         <dict>
@@ -58,6 +67,7 @@
                 <key>path_list</key>
                 <array>
                     <string>%RECIPE_CACHE_DIR%/unpack</string>
+                    <string>%RECIPE_CACHE_DIR%/payload</string>
                 </array>
             </dict>
         </dict>
